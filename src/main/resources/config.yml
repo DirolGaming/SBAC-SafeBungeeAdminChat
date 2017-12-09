@@ -13,6 +13,10 @@ adminchat-toggle-disabled: "&8[&c&lSBAC&8] &7AC toggle disabled."
 # Configure the message of the configuration file being reloaded.
 config-reloaded: "&7Config has been reloaded. Yay?"
 
+# UPDATE CHECK
+# Do you want the plugin to automatically check for updates at startup?
+check-update: true
+
 # ADMIN CHAT
 # Configure the format of AdminChat, available placeholders are: %player% & %message%.
 adminchat-format: "&c&lAC &f%player%&8: &f%message%"

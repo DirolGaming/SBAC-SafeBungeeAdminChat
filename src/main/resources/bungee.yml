@@ -20,14 +20,14 @@ permissions:
       sbac.helpop.receive: true
       sbac.act: true
   sbac.ac:
-  default: false
-  description: Get the ability to use /ac <msg> command.
+    default: false
+    description: Get the ability to use /ac <msg> command.
   sbac.act:
-  default: false
-  description: Get the ability to toggle AdminChat
+    default: false
+    description: Get the ability to toggle AdminChat
   sbac.helpop:
-  default: true
-  description: Get the ability to send messages to online staff to get help.
+    default: true
+    description: Get the ability to send messages to online staff to get help.
   sbac.helpop.receive:
-  default: false
-  description: Receive /helpop messages.
+    default: false
+    description: Receive /helpop messages.

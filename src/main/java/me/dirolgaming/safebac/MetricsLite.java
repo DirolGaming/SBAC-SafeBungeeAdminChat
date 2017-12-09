@@ -287,7 +287,7 @@ public class MetricsLite {
         }
         try (
                 FileReader fileReader = new FileReader(file);
-                BufferedReader bufferedReader =  new BufferedReader(fileReader);
+                BufferedReader bufferedReader =  new BufferedReader(fileReader)
         ) {
             return bufferedReader.readLine();
         }

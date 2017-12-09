@@ -1,4 +1,4 @@
-package me.DirolGaming.SafeBAC;
+package me.dirolgaming.safebac;
 
 import net.md_5.bungee.api.ChatColor;
 import net.md_5.bungee.api.CommandSender;

@@ -1,4 +1,4 @@
-package me.DirolGaming.SafeBAC;
+package me.dirolgaming.safebac;
 
 import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.plugin.Plugin;

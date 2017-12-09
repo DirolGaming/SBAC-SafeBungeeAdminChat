@@ -1,6 +1,6 @@
 name: SafeBAC
 version: 1.0.1
-main: me.DirolGaming.SafeBAC.Main
+main: me.dirolgaming.safebac.Main
 author: DirolGaming
 commands:
   ac:

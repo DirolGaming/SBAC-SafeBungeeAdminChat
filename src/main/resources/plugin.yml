@@ -1,0 +1,33 @@
+name: SafeBAC
+version: 1.0.1
+main: me.DirolGaming.SafeBAC.Main
+author: DirolGaming
+commands:
+  ac:
+    aliases: [ac]
+  actoggle:
+    aliases: [act]
+  helpop:
+    aliases: [hp]
+  safebac:
+    aliases: [sbac]
+
+permissions:
+  sbac.*:
+    children:
+      sbac.ac: true
+      sbac.helpop: true
+      sbac.helpop.receive: true
+      sbac.act: true
+  sbac.ac:
+  default: false
+  description: Get the ability to use /ac <msg> command.
+  sbac.act:
+  default: false
+  description: Get the ability to toggle AdminChat
+  sbac.helpop:
+  default: true
+  description: Get the ability to send messages to online staff to get help.
+  sbac.helpop.receive:
+  default: false
+  description: Receive /helpop messages.

@@ -20,7 +20,7 @@ public class Command_SAFEBAC extends Command {
     public void execute(CommandSender s, String[] args) {
         if (args.length == 0) {
             TextComponent info = new TextComponent("§7Plugin info - §cClick me");
-            info.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "www.spigotmc.org"));
+            info.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://www.spigotmc.org/resources/sbac-safebungeeadminchat.50530/"));
             info.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT,new ComponentBuilder("§f§lClick me to open SafeBAC spigot page").create()));
             s.sendMessage(new TextComponent("§7Author: §cDirolGaming"));
             s.sendMessage(info);

@@ -12,10 +12,10 @@ Your Ideas - If You post an idea/suggestion it's quite likely that it will be im
 * Free - This plugin will always be free, I don't believe in Premium resources so this plugin will be free ALWAYS (if you want to support me, you can donate, but it's not needed to download/use the plugin)
 
 Commands & Permissions
-/ac <message> - The command for sending messages to other online staff members. (sbac.ac)
-/sbac reload - Reload the Config.yml file. (sbac.*)
-/act - Toggle the admin chat (sbac.act)
-/sbac - See the basic information about the plugin.
-/helpop or /hp - The command for players to send a message to online staff.
-sbac.helpop - Let players use the /helpop command
-sbac.helpop.receive - Let staff members receive messages from /helpop
+* /ac <message> - The command for sending messages to other online staff members. (sbac.ac)
+* /sbac reload - Reload the Config.yml file. (sbac.*)
+* /act - Toggle the admin chat (sbac.act)
+* /sbac - See the basic information about the plugin.
+* /helpop or /hp - The command for players to send a message to online staff.
+* sbac.helpop - Let players use the /helpop command
+* sbac.helpop.receive - Let staff members receive messages from /helpop

@@ -1,5 +1,5 @@
 name: SafeBAC
-version: 1.0.1
+version: ${project.version}
 main: me.dirolgaming.safebac.Main
 author: DirolGaming
 commands:

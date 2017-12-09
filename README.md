@@ -1,5 +1,5 @@
 SafeBAC - SafeBungeeAdminChat
-A lightweight AdminChat plugin that is safe, simple to use and efficient.
+* A lightweight AdminChat plugin that is safe, simple to use and efficient.
 
 
 

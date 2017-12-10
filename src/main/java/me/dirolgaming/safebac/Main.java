@@ -39,10 +39,10 @@ public final class Main extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new Command_SAFEBAC(this));
         getLogger().info("SafeBAC version " + this.getDescription().getVersion() + " has been enabled.");
         getProxy().getScheduler().runAsync(this, () -> new MetricsLite(this));
-        checkUpdate();
+        getProxy().getScheduler().runAsync(this, () -> checkupdate());
     }
 
-    private void checkUpdate() {
+    private void checkupdate() {
         if (getConfig().getBoolean("check-update")) {
             try {
                 HttpURLConnection con = (HttpURLConnection) (new URL("http://www.spigotmc.org/api/general.php")).openConnection();
@@ -60,7 +60,6 @@ public final class Main extends Plugin {
             }
         }
     }
-
     public void setupConfig() {
         try {
             if (!this.getDataFolder().exists()) {

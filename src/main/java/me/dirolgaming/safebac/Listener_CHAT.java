@@ -11,7 +11,7 @@ import net.md_5.bungee.api.event.ChatEvent;
 import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
-final class Listener_CHAT implements Listener {
+public final class Listener_CHAT implements Listener {
     private final Main cac;
 
     Listener_CHAT(Main cac) {

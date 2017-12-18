@@ -35,7 +35,7 @@ public final class Listener_CHAT implements Listener {
         e.setCancelled(true);
         
         for (ProxiedPlayer ev : ProxyServer.getInstance().getPlayers()) {
-            if (ev.hasPermission("vmcac.act") || ev.hasPermission("vmcac.*")) {
+            if (ev.hasPermission("sbac.ac") || ev.hasPermission("sbac.*")) {
                 TextComponent evac = new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', cac.getConfig().getString("adminchat-format").replace("%player%", p.getName()).replace("%message%", msg))));
                 if (cac.getConfig().getBoolean("enable-adminchat-hover")) {
                     evac.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', cac.getConfig().getString("enable-adminchat-hover.message").replace("%server%", p.getServer().getInfo().getName()))).create()));

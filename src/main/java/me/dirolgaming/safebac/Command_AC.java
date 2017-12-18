@@ -29,12 +29,12 @@ final class Command_AC extends Command {
         ProxiedPlayer p = (ProxiedPlayer) s;
 
         if (!p.hasPermission("sbac.ac")) {
-            p.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', cac.getConfig().getString("no-permission"))));
+            p.sendMessage(new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', cac.getConfig().getString("no-permission")))));
             return;
         }
 
         if (args.length < 1) {
-            p.sendMessage(new TextComponent(ChatColor.translateAlternateColorCodes('&', cac.getConfig().getString("invalid-usage"))));
+            p.sendMessage(new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', cac.getConfig().getString("invalid-usage")))));
             return;
         }
 

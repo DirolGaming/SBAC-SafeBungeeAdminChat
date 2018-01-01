@@ -6,7 +6,7 @@
 
     <groupId>me.dirolgaming</groupId>
     <artifactId>safebac</artifactId>
-    <version>1.0.7</version>
+    <version>1.0.9</version>
     <repositories>
         <repository>
             <id>bungeecord-repo</id>

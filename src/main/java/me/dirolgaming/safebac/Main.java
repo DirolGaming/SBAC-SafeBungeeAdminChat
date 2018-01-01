@@ -18,6 +18,7 @@ import java.nio.file.Paths;
 import java.util.Collections;
 import java.util.Set;
 import java.util.WeakHashMap;
+import java.util.concurrent.ConcurrentHashMap;
 
 public final class Main extends Plugin {
     final Set<ProxiedPlayer> actlist = Collections.newSetFromMap(new WeakHashMap<>());

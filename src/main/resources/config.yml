@@ -21,7 +21,7 @@ check-update: true
 # Configure the format of AdminChat, available placeholders are: %player% & %message%.
 adminchat-format: "&c&lAC &f%player%&8: &f%message%"
 # AdminChat Hover - Set the text you want a player to see, when they hover their mouse pointer over the text that someone sent.
-# Placeholders: %server% (this placeholder works only on hover messages and on command suggestion messages).
+# Placeholders: %server% (this placeholder works only on hover messages and on command suggestion messages) & %prefix%.
 adminchat-hover:
   enable: true
   message: "&f&lServer: &f&l%server%"

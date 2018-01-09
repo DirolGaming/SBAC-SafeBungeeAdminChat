@@ -41,6 +41,10 @@ public final class Main extends Plugin {
         getLogger().info("SafeBAC version " + this.getDescription().getVersion() + " has been enabled.");
         getProxy().getScheduler().runAsync(this, () -> new MetricsLite(this));
         getProxy().getScheduler().runAsync(this, () -> checkupdate());
+
+        if(getProxy().getPluginManager().getPlugin("LuckPerms") == null) {
+            getLogger().severe("SBAC - LuckPerms was not detected, prefix placeholder may not work correctly.");
+        }
     }
 
     private void checkupdate() {

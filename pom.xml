@@ -6,7 +6,7 @@
 
     <groupId>me.dirolgaming</groupId>
     <artifactId>safebac</artifactId>
-    <version>1.0.8</version>
+    <version>1.0.9</version>
     <repositories>
         <repository>
             <id>bungeecord-repo</id>
@@ -33,8 +33,13 @@
             </resource>
         </resources>
     </build>
-
     <dependencies>
+        <dependency>
+            <groupId>me.lucko.luckperms</groupId>
+            <artifactId>luckperms-api</artifactId>
+            <version>4.0</version>
+            <scope>provided</scope>
+        </dependency>
         <dependency>
             <groupId>net.md-5</groupId>
             <artifactId>bungeecord-api</artifactId>

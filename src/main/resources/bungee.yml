@@ -2,6 +2,7 @@ name: SafeBAC
 version: ${project.version}
 main: me.dirolgaming.safebac.Main
 author: DirolGaming
+softdepend: [LuckPerms]
 commands:
   ac:
     aliases: [ac]

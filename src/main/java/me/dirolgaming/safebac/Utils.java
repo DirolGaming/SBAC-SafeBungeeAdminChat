@@ -5,6 +5,7 @@ import me.lucko.luckperms.api.Contexts;
 import me.lucko.luckperms.api.LuckPermsApi;
 import me.lucko.luckperms.api.User;
 import net.md_5.bungee.api.ChatColor;
+import net.md_5.bungee.api.ProxyServer;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
@@ -23,8 +24,10 @@ final class Utils {
             acb.append(arg).append(" ");
         return acb.toString();
     }
-
         static String getPrefix(ProxiedPlayer p) {
+            if(ProxyServer.getInstance().getPluginManager().getPlugin("LuckPerms") == null) {
+                return "";
+            }
         final LuckPermsApi lpAPI = LuckPerms.getApi();
             User user = lpAPI.getUser(p.getUniqueId());
             Contexts userCtx = lpAPI.getContextForUser(user).orElseThrow(() -> new IllegalStateException("Could not get LuckPerms context for player " + p));
@@ -38,7 +41,9 @@ final class Utils {
 
         if (safeBAC.getConfig().getBoolean("adminchat-hover.enable")) {
             evac.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', safeBAC.getConfig().getString("adminchat-hover.message")
-                    .replace("%server%", p.getServer().getInfo().getName()))).create()));
+                    .replace("%server%", p.getServer().getInfo().getName())
+                    .replace("%prefix%", getPrefix(p))
+                    )).create()));
         }
 
         if (safeBAC.getConfig().getBoolean("adminchat-click.enable")) {
@@ -49,6 +54,7 @@ final class Utils {
             if (safeBAC.getConfig().getBoolean("adminchat-click.command.enable")) {
                 evac.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, safeBAC.getConfig().getString("adminchat-click.command.command")
                         .replace("%player%", p.getName())
+                        .replace("%prefix%", getPrefix(p))
                         .replace("%server%", p.getServer().getInfo().getName())));
             }
         }

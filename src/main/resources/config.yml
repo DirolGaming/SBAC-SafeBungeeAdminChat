@@ -1,7 +1,7 @@
 # SafeBungeeAdminChat - By DirolGaming
 
 # MESSAGES
-# Configure the message sent to console when console invokes a command.
+# Configure the message sent to console when it invokes a command.
 console-message: "This command is not supported in console."
 # Configure the message sent to players who don't have enough permissions for a certain command.
 no-permission: "&8[&c&lSBAC&8] &7You do not have enough permissions for this command."

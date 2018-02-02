@@ -9,7 +9,7 @@ import net.md_5.bungee.api.plugin.Command;
 import static me.dirolgaming.safebac.Utils.broadcastModchatMessage;
 import static me.dirolgaming.safebac.Utils.buildMessage;
 
-public class Command_MC extends Command  {
+final class Command_MC extends Command  {
         private final Main cac;
 
         Command_MC(Main cac) {

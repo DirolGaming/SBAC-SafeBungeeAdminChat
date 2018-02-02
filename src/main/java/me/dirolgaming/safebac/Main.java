@@ -40,6 +40,7 @@ public final class Main extends Plugin {
         getProxy().getPluginManager().registerListener(this, new Listener_CHAT(this));
         getProxy().getPluginManager().registerCommand(this, new Command_SAFEBAC(this));
         getProxy().getPluginManager().registerCommand(this, new Command_MC(this));
+        getProxy().getPluginManager().registerCommand(this, new Command_MCT(this));
         getLogger().info("SafeBAC version " + this.getDescription().getVersion() + " has been enabled. Thank you.");
         getProxy().getScheduler().runAsync(this, () -> new MetricsLite(this));
         getProxy().getScheduler().runAsync(this, () -> checkupdate());

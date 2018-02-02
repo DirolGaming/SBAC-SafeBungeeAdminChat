@@ -71,6 +71,40 @@ final class Utils {
             }
         }
     }
+    static void broadcastModchatMessage(Main safeBAC, ProxiedPlayer p, String message) {
+        TextComponent evac = new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', safeBAC.getConfig().getString("modchat-format")
+                .replace("%player%", p.getName())
+                .replace("%prefix%", getPrefix(p))
+                .replace("%server%", p.getServer().getInfo().getName())
+                .replace("%message%", message))));
+
+        if (safeBAC.getConfig().getBoolean("modchat-hover.enable")) {
+            evac.setHoverEvent(new HoverEvent(HoverEvent.Action.SHOW_TEXT, new ComponentBuilder(ChatColor.translateAlternateColorCodes('&', safeBAC.getConfig().getString("modchat-hover.message")
+                    .replace("%server%", p.getServer().getInfo().getName())
+                    .replace("%prefix%", getPrefix(p))
+                    .replace("%server%", p.getServer().getInfo().getName())
+            )).create()));
+        }
+
+        if (safeBAC.getConfig().getBoolean("modchat-click.enable")) {
+            if (safeBAC.getConfig().getBoolean("modchat-click.url.enable-")) {
+                evac.setClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, safeBAC.getConfig().getString("modchat-click.url.url")));
+            }
+
+            if (safeBAC.getConfig().getBoolean("modchat-click.command.enable")) {
+                evac.setClickEvent(new ClickEvent(ClickEvent.Action.SUGGEST_COMMAND, safeBAC.getConfig().getString("modchat-click.command.command")
+                        .replace("%player%", p.getName())
+                        .replace("%prefix%", getPrefix(p))
+                        .replace("%server%", p.getServer().getInfo().getName())));
+            }
+        }
+
+        for (ProxiedPlayer ev : safeBAC.getProxy().getPlayers()) {
+            if (ev.hasPermission("sbac.mc")) {
+                ev.sendMessage(evac);
+            }
+        }
+    }
 
     static void broadcasthelpopmsg(Main cac, ProxiedPlayer p, CommandSender s, String message) {
         TextComponent evhp = new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', cac.getConfig().getString("helpop-received")

@@ -38,7 +38,8 @@ public final class Main extends Plugin {
         getProxy().getPluginManager().registerCommand(this, new Command_HELPOP(this));
         getProxy().getPluginManager().registerListener(this, new Listener_CHAT(this));
         getProxy().getPluginManager().registerCommand(this, new Command_SAFEBAC(this));
-        getLogger().info("SafeBAC version " + this.getDescription().getVersion() + " has been enabled.");
+        getProxy().getPluginManager().registerCommand(this, new Command_MC(this));
+        getLogger().info("SafeBAC version " + this.getDescription().getVersion() + " has been enabled. Thank you.");
         getProxy().getScheduler().runAsync(this, () -> new MetricsLite(this));
         getProxy().getScheduler().runAsync(this, () -> checkupdate());
 

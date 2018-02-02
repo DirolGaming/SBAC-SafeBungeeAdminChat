@@ -10,6 +10,8 @@ invalid-usage: "&8[&c&lSBAC&8] &7Please insert a message."
 # Configure the message of toggling AdminChat.
 adminchat-toggle-enabled: "&8[&c&lSBAC&8] &7AC toggled."
 adminchat-toggle-disabled: "&8[&c&lSBAC&8] &7AC toggle disabled."
+modchat-toggle-enabled: "&8[&c&lSBAC&8] &7MC toggle enabled."
+modchat-toggle-disabled: "&8[&c&lSBAC&8] &7MC toggle disabled."
 # Configure the message of the configuration file being reloaded.
 config-reloaded: "&7Config has been reloaded. Yay?"
 
@@ -31,6 +33,20 @@ adminchat-click:
   url:
     enable: false
     url: "google.com"
+  command:
+    enable: true
+    command: "/msg %player%"
+
+# MOD CHAT - Placeholders are the same as AdminChat's placeholders.
+modchat-format: "&2&lMC &f%player%&8: &f%message%"
+modchat-hover:
+  enable: true
+  message: "&2&lServer: &a%server%"
+modchat-click:
+  enable: true
+  url:
+    enable: false
+    url: "foosite.com"
   command:
     enable: true
     command: "/msg %player%"

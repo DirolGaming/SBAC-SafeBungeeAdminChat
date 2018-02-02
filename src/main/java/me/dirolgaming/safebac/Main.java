@@ -22,6 +22,7 @@ import java.util.concurrent.ConcurrentHashMap;
 
 public final class Main extends Plugin {
     final Set<ProxiedPlayer> actlist = Collections.newSetFromMap(new WeakHashMap<>());
+    final Set<ProxiedPlayer> mctlist = Collections.newSetFromMap(new WeakHashMap<>());
 
     private Path configurationFile;
     private Configuration config;

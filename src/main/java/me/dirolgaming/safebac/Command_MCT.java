@@ -10,7 +10,7 @@ final class Command_MCT extends Command {
 private final Main cac;
 
         Command_MCT(Main cac) {
-        super("actoggle", null, "act");
+        super("mctoggle", null, "mct");
         this.cac = cac;
         }
 
@@ -21,7 +21,7 @@ public void execute(CommandSender s, String[] args) {
         return;
     }
 
-    if (!s.hasPermission("sbac.act")) {
+    if (!s.hasPermission("sbac.mct")) {
         s.sendMessage(new TextComponent(TextComponent.fromLegacyText(ChatColor.translateAlternateColorCodes('&', this.cac.getConfig().getString("no-permission")))));
         return;
     }

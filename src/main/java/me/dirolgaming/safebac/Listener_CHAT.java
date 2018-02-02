@@ -6,6 +6,7 @@ import net.md_5.bungee.api.plugin.Listener;
 import net.md_5.bungee.event.EventHandler;
 
 import static me.dirolgaming.safebac.Utils.broadcastAdminchatMessage;
+import static me.dirolgaming.safebac.Utils.broadcastModchatMessage;
 
 public final class Listener_CHAT implements Listener {
     private final Main cac;
@@ -30,8 +31,14 @@ public final class Listener_CHAT implements Listener {
 
         if (!cac.actlist.contains(p))
             return;
-
+        if (!cac.mctlist.contains(p))
+            return;
         e.setCancelled(true);
-        broadcastAdminchatMessage(cac, p, msg);
+        if (cac.actlist.contains(p)) {
+            broadcastAdminchatMessage(cac, p, msg);
+        }
+        if (cac.mctlist.contains(p)) {
+            broadcastModchatMessage(cac, p, msg);
+        }
     }
 }

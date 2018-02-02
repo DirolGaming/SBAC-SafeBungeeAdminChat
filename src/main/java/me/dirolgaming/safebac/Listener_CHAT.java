@@ -28,17 +28,24 @@ public final class Listener_CHAT implements Listener {
 
         ProxiedPlayer p = (ProxiedPlayer) e.getSender();
         String msg = e.getMessage();
-        e.setCancelled(true);
-        if (cac.actlist.contains(p)) {
-            broadcastAdminchatMessage(cac, p, msg);
+        if (cac.actlist.contains(p) || cac.mctlist.contains(p)) {
+            if (cac.actlist.contains(p)) {
+                broadcastAdminchatMessage(cac, p, msg);
+                e.setCancelled(true);
+            }
+            if (cac.mctlist.contains(p)) {
+                broadcastModchatMessage(cac, p, msg);
+                e.setCancelled(true);
+            }
         }
-        if (cac.mctlist.contains(p)) {
-            broadcastModchatMessage(cac, p, msg);
+        else {
+            e.setCancelled(false);
         }
-        if (!cac.actlist.contains(p))
-            return;
-        if (!cac.mctlist.contains(p))
-            return;
+
+
+
+
+
 
     }
 }

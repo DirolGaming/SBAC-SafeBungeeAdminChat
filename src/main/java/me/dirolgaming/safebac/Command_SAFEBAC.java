@@ -30,6 +30,8 @@ final class Command_SAFEBAC extends Command {
             s.sendMessage(new TextComponent("§7/ac <msg> -  §cchat with online staff"));
             s.sendMessage(new TextComponent("§7/act - §ctoggle admin chat"));
             s.sendMessage(new TextComponent("§7/helpop <msg> -  §csend a message to online staff"));
+            s.sendMessage(new TextComponent("&7/mc <msg> . &cSend a message to ModChat."));
+            s.sendMessage(new TextComponent("&7/mct - &cToggle ModChat"));
         } else {
             switch(args[0].toLowerCase(Locale.ENGLISH)) {
                 case "reload": {

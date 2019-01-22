@@ -44,10 +44,8 @@ public final class Main extends Plugin {
         getLogger().info("SafeBAC version " + this.getDescription().getVersion() + " has been enabled. Thank you.");
         getProxy().getScheduler().runAsync(this, () -> new MetricsLite(this));
         getProxy().getScheduler().runAsync(this, () -> checkupdate());
+        getProxy().getScheduler().runAsync(this, () -> checkLP());
 
-        if(getProxy().getPluginManager().getPlugin("LuckPerms") == null) {
-            getLogger().severe("SBAC - LuckPerms was not detected, prefix placeholder may not work correctly.");
-        }
     }
 
     private void checkupdate() {
@@ -96,6 +94,14 @@ public final class Main extends Plugin {
             ConfigurationProvider.getProvider(YamlConfiguration.class).save(getConfig(), new File(this.getDataFolder(), "config.yml"));
         } catch (IOException e) {
             e.printStackTrace();
+        }
+    }
+    private void checkLP() {
+        if(getProxy().getPluginManager().getPlugin("LuckPerms") == null) {
+            getLogger().severe("SBAC - LuckPerms was not detected, prefix placeholder may not work correctly.");
+        }
+        else {
+            getLogger().info("SBAC - LuckPerms found, prefix placeholders will work.");
         }
     }
 

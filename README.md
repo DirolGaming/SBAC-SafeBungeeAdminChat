@@ -3,7 +3,6 @@ SafeBAC - SafeBungeeAdminChat
 
 ## Downloads
 ### [Spigot](https://www.spigotmc.org/resources/sbac-safebungeeadminchat.50530/)<br>
-### [Jenkins](http://ci.dirolgaming.me/)<br>
 
 Features
 * Implementation of newer features - Features like Click events and hover events are 100% supported and give your players and your staff a better way of interacting with AdminChat and HelpOP messages

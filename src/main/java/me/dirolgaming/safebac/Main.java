@@ -98,10 +98,10 @@ public final class Main extends Plugin {
     }
     private void checkLP() {
         if(getProxy().getPluginManager().getPlugin("LuckPerms") == null) {
-            getLogger().severe("SBAC - LuckPerms was not detected, prefix placeholder may not work correctly.");
+            getLogger().severe("LuckPerms was not detected, prefix placeholder may not work correctly.");
         }
         else {
-            getLogger().info("SBAC - LuckPerms found, prefix placeholders will work.");
+            getLogger().info("LuckPerms found, prefix placeholders will work.");
         }
     }
 
